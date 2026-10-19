@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.apex.y1os'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.apex.y1os"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0-ApexOS"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // Zero heavy external dependencies to keep APK under 200KB and RAM usage minimal
+}
